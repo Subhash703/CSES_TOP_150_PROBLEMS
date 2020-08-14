@@ -4,26 +4,20 @@ Consider an algorithm that takes as input a positive integer n. If n is even, th
 
 */
 
-void findArr(int n){
-    if(n == 1){
-        cout<<n<<" ";
-        return;
-    }
-    if(n%2==0){
-        cout<<n<<" ";
-        findArr(n/2);
-    }else{
-        cout<<n<<" ";
-        findArr(n*3+1);
-    }
- }
-
-int32_t main()
+ #include<iostream>
+using namespace std;
+int main()
 {
-    c_p_c();
-    
-    int n;
+    long n;
     cin>>n;
-    findArr(n);
+    cout<<n;
+    while(n>1){
+        if(n%2 ==0)
+            n/=2;
+        else
+            n=n*3+1;
+
+        cout<<" "<<n;
+    }
     return 0;
 }
